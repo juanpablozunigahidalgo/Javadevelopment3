@@ -1,54 +1,92 @@
-## Problem Statement: String finder using if else ##
+## Problem Statement: Develop a calculator using switch case ##
 
-**Given 3 Strings find whether second string comes after the first string in the search string**
+**Get two numbers of type of integer or double from the user and perform the operation(Add,Multiply,Divide,Subtract)
+selected by the user using switchcase, if-else statement,break and looping switchcase using recursion**
 
-**This exercise contains a class named StringFinder with the following methods:**
+**This exercise contains a class named Calculator with the following methods:**
 
-    +getInput() : String 
-    - Should scan for three input strings naming searchString,firstString and secondString respectively. 
---------------------------------------------------------------------------------------------- 
-     +findString(String,String,String) : int
-    - Should return 1 if the secondString comes after after firstString in the searchString.
-    - Should return 0 if the strings are not found as expected.
-    - Should return -1 if the input string is empty/null. 
-    - Input Strings can contain alphanumeric character, spaces and special characters.
--------------------------------------------------------------------------------------------
-    +displayResutl() : void 
-    - Should displays the result as shown in example section.  
----------------------------------------------------------------------------------------
-    +closeScanner() : void
-    - Should close the scanner object.
-
-**Do the following in the main method of StringFinder class**
-
-Call the functions in the required sequence.  
+    +calculate(int, int, int) : String  
+         - Should take three integers(firstValue,secondValue,operator) as input and return a String of format "firstValue operation secondValue = result"
+         - Switch case should be used to provide user operations as option to select
+         - The number of switch cases should be similar to number of operation options provided in menu 
+         - Operator value that is not present as a case should be dealt by default case
+-------------------------------------------------------
+    +getValues(Scanner) : void  
+         - Should get three integers from user as input from console using scanner
+         - After receiving the operands the operation menu should be shown to the user to choose from
+         - All the three values should be send to calculate method and return value should be printed out to user
 
 ## Example
-    Sample Input:
-    abcd
-    ab
-    cd 
-    
     Expected Output:
-    Found as expected
+    Enter the first number:
+    45
+    Enter the second number:
+    22
+    Enter number beside the operation to perform: 
+     1. Add 
+     2. Subtract
+     3. Multiply
+     4. Divide
+    1
+    45 + 22 = 67
+    Do you want to try again(y/n)
+    n 
 --------------------------------------------------------
-    Sample Input:
-    String finder
-    finder
-    value  
-    
     Expected Output:
-    Not found
+    Enter the first number:
+    65
+    Enter the second number:
+    34
+    Enter number beside the operation to perform: 
+     1. Add 
+     2. Subtract
+     3. Multiply
+     4. Divide
+    2
+    65 - 34 = 31
+    Do you want to try again(y/n)
+    y
+    Enter the first number:
+    45
+    Enter the second number:
+    22
+    Enter number beside the operation to perform: 
+     1. Add 
+     2. Subtract
+     3. Multiply
+     4. Divide
+    1
+    45 + 22 = 67
+    Do you want to try again(y/n)
+    n  
 --------------------------------------------------------
-    Sample Input:
-    Search value
-    first
-    
-    
     Expected Output:
-    Empty string or null
-
+    Enter the first number:
+    45
+    Enter the second number:
+    22
+    Enter number beside the operation to perform: 
+     1. Add 
+     2. Subtract
+     3. Multiply
+     4. Divide
+    7
+    Entered wrong option 7
+--------------------------------------------------------
+    Expected Output:
+    Enter the first number:
+    90
+    Enter the second number:
+    0
+    Enter number beside the operation to perform: 
+     1. Add 
+     2. Subtract
+     3. Multiply
+     4. Divide
+    4
+    The divider (secondValue) cannot be zero 
 ## Instructions
+
 - Avoid printing unnecessary values other than expected output as given in sample
 - Take care of whitespace/trailing whitespace
 - Do not change the provided class/method names unless instructed
